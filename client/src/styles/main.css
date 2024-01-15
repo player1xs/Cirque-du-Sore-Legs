@@ -1,0 +1,69 @@
+header {
+  background-color: rgb(99, 99, 99);
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 17%;
+}
+
+ul.navbar {
+  margin: 0;
+  font-size: 20px;
+}
+
+.eventList {
+  padding: 0;
+}
+
+.eventSgl-container {
+  color: white;
+  padding-left: 20px;
+  padding-bottom: 10px;
+  background-image: linear-gradient(to top, rgb(73, 73, 73), rgb(83, 83, 83), rgb(93, 93, 93), rgb(103, 103, 103), rgb(113, 113, 113), rgb(123, 123, 123), rgb(133, 133, 133));
+  display: flex;
+  flex-direction: row;
+}
+
+.eventImage {
+  padding-right: 25px;
+  height: 100px;
+}
+
+.infobox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.detailsbox {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.detailsbox-inner {
+  display: flex;
+  flex-direction: row;
+}
+
+.datebox {
+  align-self: end;
+}
+
+.genre-type {
+  width: 100px;
+  background-color: purple;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.content {
+  margin-left: 17%;
+}/*# sourceMappingURL=main.css.map */

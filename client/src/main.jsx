@@ -1,18 +1,20 @@
-import { ReactDOM } from 'react-dom/client'
+import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+
+import 'bootstrap/dist/css/bootstrap.min.css'
 import './styles/main.scss'
 
 // page components
 import App from './App'
 import Home from './components/Home'
 import EventIndex from './components/EventIndex'
-// import EventSingle from './components/EventSingle'
+import EventSingle from './components/EventSingle'
 // import EventCreate from './components/EventCreate'
 import ErrorPage from './components/ErrorPage'
 // add Blog and Cookies and Terms
 
 // Loaders
-import { getAllEvents } from './utils/loaders/event' //add getSingleEvent into crulies
+import { getAllEvents, getSingleEvent } from './utils/loaders/event'
 
 // import { createOrDeleteComment, createEvent, updateOrDeleteEvent } from './utils/actions/event' //NEED TO ADD THIS< ONCE USER AND AUTHENTICATION ARE IN
 // import EventUpdate from './components/EventUpdate' //need to add this and remember to add population to fields
@@ -34,12 +36,12 @@ const router = createBrowserRouter([
         element: <EventIndex />,
         loader: getAllEvents
       },
-      // {
-      //   path: '/eventIndex/:eventId',
-      //   element: <EventSingle />,
-      //   loader: async ({ params }) => getSingleEvent(params.eventId),
+      {
+        path: '/eventIndex/:eventId',
+        element: <EventSingle />,
+        loader: async ({ params }) => getSingleEvent(params.eventId),
       //   action: async ({ request, params }) => createOrDeleteComment(request, params.eventId, params.commentId)
-      // },
+      },
       // {
       //   path: '/eventIndex/create',
       //   element: <EventCreate />,
