@@ -1,13 +1,212 @@
 header {
   background-color: rgb(99, 99, 99);
+  background: repeating-radial-gradient(
+    circle at 0 0,
+    rgb(46, 46, 46),
+    rgb(147, 147, 147)
+  );
+  
   position: fixed;
   left: 0;
   top: 0;
   height: 100vh;
-  width: 17%;
+  width: 15%;
+  box-shadow: 10px 0 25px 0 rgb(0, 0, 0);
+  border-top-right-radius: 20px ;
 }
 
-ul.navbar {
-  margin: 0;
-  font-size: 20px;
+.navigation {
+  display: flex;
+  flex-direction: column;
 }
+
+
+.navitem {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  position: relative;
+  padding: 20px 70px;
+  border-bottom-right-radius: 3.75rem;
+  border-top-right-radius: 0.4rem;
+  line-height: 2.5rem;
+  // font-size: 2rem;
+  font-weight: 600;
+    
+  border: 1px solid #00000075;
+  background-image: linear-gradient(-180deg, #a2003e 0%, #4a0030 100%);
+  box-shadow: 0 1rem 1.25rem 0 rgba(0, 0, 0, 0.5),
+                0 -0.25rem 1.5rem rgb(0, 0, 0) inset,
+                0 0.75rem 0.5rem rgba(255,255,255, 0.4) inset,
+                0 0.25rem 0.5rem 0 rgb(104, 104, 104) inset;
+  }
+  
+  
+  
+.navitem::before {
+  content: "";
+  display: block;
+  height: 0.25rem;
+  position: absolute;
+  top: 0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 7.5rem);
+  background: #a5a5a5;
+  border-radius: 100%;
+    
+  opacity: 0.7;
+  background-image: linear-gradient(-270deg, rgba(255,255,255,0.00) 0%, #a1a1a1 20%, #a1a1a1 80%, rgba(255,255,255,0.00) 100%);
+  }
+  
+.navitem::after {
+  content: "";
+  display: block;
+  height: 0.25rem;
+  position: absolute;
+  bottom: 0.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 7.5rem);
+  background: #fff;
+  border-radius: 100%;
+    
+  filter: blur(1px);
+  opacity: 0.05;
+  background-image: linear-gradient(-270deg, rgba(255,255,255,0.00) 0%, #FFFFFF 20%, #FFFFFF 80%, rgba(255,255,255,0.00) 100%);
+  }
+
+
+
+  // border-bottom-right-radius: 47px;
+  // border-top-right-radius: 5px;
+  // text-align: left;
+  // padding: 20px 30px;
+  // text-decoration: none;
+
+
+.btn-primary {
+  background: transparent;
+  border: none;
+}
+
+
+
+
+
+// MODAL ---------------------------------------------
+
+.create-account {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 50vh; 
+  box-sizing: border-box;
+  background: rgba(58,49,40,.65);
+  border-radius: 12px;
+  max-width: 400px;
+  padding: 8px;
+  width: 100%;
+}
+
+Form.create-account {
+  position: fixed;
+  width: 450px;
+  position: fixed;
+  bottom: 40;
+  width: 100%;
+  position: absolute;
+  bottom: 4px;
+}
+
+Form.log_in {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 40vh; 
+  box-sizing: border-box;
+  background: rgba(58,49,40,.65);
+  border-radius: 12px;
+  max-width: 400px;
+  padding: 8px;
+  width: 100%;
+}
+
+input {
+  background-color: #fff;
+  margin: 6px;
+  padding: 10px;
+  border: none;
+  border-radius: 9px;
+  display: block;
+  // height: 5vh;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%
+}
+
+.modal.body {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  backdrop-filter: blur(1px);
+}
+
+.modal-header {
+  border: none;
+  width: 20px;
+}
+
+.modal-content {
+  background-color: transparent;
+  border:none
+}
+
+.centered-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 300px
+}
+
+.sign-in {
+  color: white
+}
+
+:root.fade.modal-backdrop.show {
+  background-color: transparent;
+}
+.indexs {
+  width: 300px;
+  background-color: rgba(58,49,40,.65);
+  backdrop-filter: blur(1px);
+  background-color: transparent;
+}
+
+
+.btn.btn-danger {
+  margin-bottom: 10px;
+}
+
+
+button.icon.btn.btn-primary {
+  margin: auto 0px;
+  padding-right: 20px;
+}
+
+Button.btn-close{
+  background-color: white;
+  width: 100px;
+  height: 0px
+}
+
+h2 {
+  color: white;
+}
+

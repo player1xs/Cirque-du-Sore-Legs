@@ -76,6 +76,7 @@ export default function EventIndex() {
       <Container fluid className="eventList overflow-auto">
         {filteredEvents.map(event => {
           const { id, event_name, distance, genres, image, date } = event
+          console.log(genres)
           return (
             <Col
               key={id}
@@ -88,8 +89,8 @@ export default function EventIndex() {
                   <div className="detailsbox">
                     <div className="name">{event_name}</div>
                     <div className="detailsbox-inner">
-                      <div className="genre-type">{genres}</div>
-                      <div className="distance">{distance}</div>
+                      <div className="genre-type">{genres[0].name}</div>
+                      <div className="distance">{distance} km</div>
                     </div>
                   </div>
                   <div className="datebox">

@@ -9,16 +9,19 @@ import App from './App'
 import Home from './components/Home'
 import EventIndex from './components/EventIndex'
 import EventSingle from './components/EventSingle'
-// import EventCreate from './components/EventCreate'
+import EventCreate from './components/EventCreate'
+import EventUpdate from './components/EventUpdate'
 import ErrorPage from './components/ErrorPage'
+import Profile from './components/Profile'
+import Blog from './components/Blog'
 // add Blog and Cookies and Terms
 
 // Loaders
 import { getAllEvents, getSingleEvent } from './utils/loaders/event'
 
-// import { createOrDeleteComment, createEvent, updateOrDeleteEvent } from './utils/actions/event' //NEED TO ADD THIS< ONCE USER AND AUTHENTICATION ARE IN
-// import EventUpdate from './components/EventUpdate' //need to add this and remember to add population to fields
-// import { getSingleUser } from './utils/loaders/user' // Make sure to update this
+//aciotns
+import { createOrDeleteComment, createEvent, updateOrDeleteEvent } from './utils/actions/event'
+import { getSingleUser } from './utils/loaders/user'
 
 const router = createBrowserRouter([
   {
@@ -40,19 +43,28 @@ const router = createBrowserRouter([
         path: '/eventIndex/:eventId',
         element: <EventSingle />,
         loader: async ({ params }) => getSingleEvent(params.eventId),
-      //   action: async ({ request, params }) => createOrDeleteComment(request, params.eventId, params.commentId)
+        action: async ({ request, params }) => createOrDeleteComment(request, params.eventId, params.commentId)
       },
-      // {
-      //   path: '/eventIndex/create',
-      //   element: <EventCreate />,
-      //   action: async ({ request }) => createEvent(request)
-      // },
-      // {
-      //   path: '/eventIndex/:eventId/update',
-      //   element: <EventUpdate />,
-      //   loader: async ({ params }) => getSingleEvent(params.eventId),
-      //   action: async ({ request, params }) => updateOrDeleteEvent(request, params.eventId)
-      // }
+      {
+        path: '/eventIndex/create',
+        element: <EventCreate />,
+        action: async ({ request }) => createEvent(request)
+      },
+      {
+        path: '/eventIndex/:eventId/update',
+        element: <EventUpdate />,
+        loader: async ({ params }) => getSingleEvent(params.eventId),
+        action: async ({ request, params }) => updateOrDeleteEvent(request, params.eventId)
+      },
+      {
+        path: '/profile',
+        element: <Profile />,
+        loader: getSingleUser
+      },
+      {
+        path: '/blog',
+        element: <Blog />
+      }
     ]
   }
 ])

@@ -12,7 +12,7 @@ from lib.permissions import IsOwnerOrReadOnly
 #Mathod: GET, POST
 class EventListCreateView(OwnerListCreateView):
   queryset = Event.objects.all()
-  serializer_class = EventSerializer
+  serializer_class = PopulatedEventSerializer
   permission_classes = [IsAuthenticatedOrReadOnly]
 
 #Path: /events/:id/

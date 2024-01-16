@@ -1,6 +1,8 @@
 @import './components/Nav.scss';
 @import './components/EventIndex.scss';
+@import './components/EventSingle.scss';
 @import './components/ErrorPage.scss';
+@import './components/AdColumn.scss';
 
 
 
@@ -11,6 +13,46 @@
   margin: 0
 }
 
-.content {
-  margin-left: 17%;
+body {
+  background: linear-gradient(120deg, #FF0000 0%, #2400FF 100%), 
+              linear-gradient(120deg, #FA00FF 0%, #208200 100%), 
+              linear-gradient(130deg, #00F0FF 0%, #000000 100%), 
+              radial-gradient(110% 140% at 15% 90%, #ffffff 0%, #1700A4 100%), 
+              radial-gradient(100% 100% at 50% 0%, #AD00FF 0%, #00FFE0 100%), 
+              radial-gradient(100% 100% at 50% 0%, #00FFE0 0%, #7300A9 80%), 
+              linear-gradient(30deg, #7ca304 0%, #2200AA 100%);
+  background-blend-mode: overlay, color, overlay, difference, color-dodge, difference, normal;
+  height: 100vh;
+
 }
+
+.content {
+  margin-left: 15%;
+  margin-right: 15%;
+  // box-shadow: -10px 0 15px 0 rgb(102, 102, 102);
+}
+
+
+.map-container {
+  height: 400px;
+}
+
+.sidebar {
+  background-color: rgb(35 55 75 / 90%);
+  color: #fff;
+  padding: 6px 12px;
+  font-family: monospace;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 12px;
+  border-radius: 4px;
+  }
+
+  .spinner {
+    display: block;
+    margin: auto;
+    margin-top: 300px;
+    border-radius: 55%;
+  }
