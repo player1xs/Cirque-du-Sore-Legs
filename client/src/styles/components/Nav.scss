@@ -5,16 +5,21 @@ header {
     rgb(46, 46, 46),
     rgb(147, 147, 147)
   );
-  
   position: fixed;
   left: 0;
   top: 0;
   height: 100vh;
-  width: 15%;
+  width: 16%;
   box-shadow: 10px 0 25px 0 rgb(0, 0, 0);
   border-top-right-radius: 20px ;
 }
 
+h1 {
+  background-image: linear-gradient(90deg, rgb(184, 0, 150), rgba(216, 5, 5, 0.863));
+  background-clip: text;
+  background-size: 100%;
+  -webkit-text-fill-color: transparent;
+}
 .navigation {
   display: flex;
   flex-direction: column;
@@ -26,7 +31,7 @@ header {
   color: white;
   cursor: pointer;
   position: relative;
-  padding: 20px 70px;
+  padding: 10px 15px;
   border-bottom-right-radius: 3.75rem;
   border-top-right-radius: 0.4rem;
   line-height: 2.5rem;
@@ -56,7 +61,11 @@ header {
   border-radius: 100%;
     
   opacity: 0.7;
-  background-image: linear-gradient(-270deg, rgba(255,255,255,0.00) 0%, #a1a1a1 20%, #a1a1a1 80%, rgba(255,255,255,0.00) 100%);
+  background-image: linear-gradient(-270deg, 
+                  rgba(255,255,255,0.00) 0%, 
+                  #a1a1a1 20%, 
+                  #a1a1a1 80%, 
+                  rgba(255,255,255,0.00) 100%);
   }
   
 .navitem::after {
@@ -73,16 +82,12 @@ header {
     
   filter: blur(1px);
   opacity: 0.05;
-  background-image: linear-gradient(-270deg, rgba(255,255,255,0.00) 0%, #FFFFFF 20%, #FFFFFF 80%, rgba(255,255,255,0.00) 100%);
+  background-image: linear-gradient(-270deg, 
+                  rgba(255,255,255,0.00) 0%, 
+                  #FFFFFF 20%, 
+                  #FFFFFF 80%, 
+                  rgba(255,255,255,0.00) 100%);
   }
-
-
-
-  // border-bottom-right-radius: 47px;
-  // border-top-right-radius: 5px;
-  // text-align: left;
-  // padding: 20px 30px;
-  // text-decoration: none;
 
 
 .btn-primary {

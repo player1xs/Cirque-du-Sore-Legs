@@ -10,7 +10,8 @@
 
 * {
   box-sizing: border-box;
-  margin: 0
+  margin: 0;
+  font-family: 'Audiowide',sans-serif;
 }
 
 body {
@@ -23,11 +24,10 @@ body {
               linear-gradient(30deg, #7ca304 0%, #2200AA 100%);
   background-blend-mode: overlay, color, overlay, difference, color-dodge, difference, normal;
   height: 100vh;
-
 }
 
 .content {
-  margin-left: 15%;
+  margin-left: 16%;
   margin-right: 15%;
   // box-shadow: -10px 0 15px 0 rgb(102, 102, 102);
 }

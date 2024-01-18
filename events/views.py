@@ -12,8 +12,12 @@ from lib.permissions import IsOwnerOrReadOnly
 #Mathod: GET, POST
 class EventListCreateView(OwnerListCreateView):
   queryset = Event.objects.all()
-  serializer_class = PopulatedEventSerializer
+  # serializer_class = PopulatedEventSerializer
   permission_classes = [IsAuthenticatedOrReadOnly]
+  def get_serializer_class(self):
+    if self.request.method == 'POST':
+      return EventSerializer
+    return PopulatedEventSerializer
 
 #Path: /events/:id/
 #Methods: GET, PUT, PATCH, DELETE

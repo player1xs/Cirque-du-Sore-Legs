@@ -14,14 +14,16 @@ class Event(models.Model):
   address = models.TextField()
   lat = models.FloatField(blank=True, null=True)
   long = models.FloatField(blank=True, null=True)
-  date = models.DateTimeField()
+  date = models.DateField()
   description = models.TextField()
   distance = models.PositiveIntegerField()
   image = models.TextField()
   website = models.CharField(max_length=255, null=True)
   genres = models.ManyToManyField(
     to='genres.Genre',
-    related_name='events'
+    related_name='events',
+    null=True,
+    blank=True
   )
   owner = models.ForeignKey(
     to='users.User',
@@ -32,7 +34,8 @@ class Event(models.Model):
   attend = models.ManyToManyField(
     to='users.User',
     related_name='events_attend',
-    null=True
+    null=True,
+    blank=True
   )
 
   def __str__(self):

@@ -14,18 +14,21 @@ export default function EventSingle() {
       <div className="content">
         <div className="singlePage">
           <h2>{event_name}</h2>
-          <Link to={`/eventIndex`} className="backBtn">Back to List</Link>
-          {activeUser() === event.owner.id && <Button className="update-delete"><Link to={`/eventIndex/${id}/update`} calassName="update-delete-link">Update / Delete</Link></Button> }
-
-
-          <div className="event-description">{description}</div>
-          <div className="">{date}</div>
-          <div className="">{distance} km</div>        
-          <div className="">{website}</div>
-          <div className="">{genres[0].name}</div>
-          <div className="">{company}</div>
-          <div className=""></div>
-          <img className="imgDr" src={ image }/>
+          <div className="singleBtns-container">
+            <Link to={`/eventIndex`} className="backBtn">Back to List</Link>
+            {activeUser() === event.owner.id && <Button className="update-delete"><Link to={`/eventIndex/${id}/update`} className="update-delete-link">Update / Delete</Link></Button> }
+          </div>
+          <div className="about-container">
+            <img className="imgDr" src={ image }/>
+            <div className="event-description">About: {description}</div>
+          </div>
+          <div className="deeets">
+            <div className="info">Date: {date}</div>
+            <div className="info">Distance: {distance} km</div>        
+            <div className="info">Category: {genres[0].name}</div>
+            <div className="info">Website: {website}</div>
+            <div className="info">Organiser: {company}</div>
+          </div>
         </div>
       </div>
     </>

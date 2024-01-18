@@ -4,13 +4,16 @@ import { useEffect, useState } from 'react'
 import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
 
+import { FaRegCalendarAlt } from "react-icons/fa";
+// import { GiPathDistance } from "react-icons/gi";
+import { GiRunningShoe } from "react-icons/gi";
 
 export default function EventIndex() {
   
   const allEvents = useLoaderData()
 
-  const [idList, setIdList] = useState([])
-  const [idRnd, setIdRnd] = useState(0)
+  // const [idList, setIdList] = useState([])
+  // const [idRnd, setIdRnd] = useState(0)
 
   const [distance, setDistance] = useState([])
   const [filters, setFilters] = useState({
@@ -47,20 +50,20 @@ export default function EventIndex() {
   }, [filters])
 
 
-  useEffect(() => {
-    const ids = allEvents.map(event => {
-      return event._id
-    })
-    setIdList(ids)
-  }, [allEvents])
+  // useEffect(() => {
+  //   const ids = allEvents.map(event => {
+  //     return event._id
+  //   })
+  //   setIdList(ids)
+  // }, [allEvents])
 
 
-  useEffect(() => {
-    const i = Math.floor(Math.random() * idList.length)
-    setIdRnd(idList[i])
-  }, [idList])
+  // useEffect(() => {
+  //   const i = Math.floor(Math.random() * idList.length)
+  //   setIdRnd(idList[i])
+  // }, [idList])
 
-
+  
 
 
   return (
@@ -68,10 +71,9 @@ export default function EventIndex() {
     <div className="content">
       <div className="content-title">  
         <h2>Event List</h2>
-      </div>
-      <div className="content-filter">
-        <input id="search" name="search" placeholder="Search..." value={filters.search} onChange={handleChange} className="searchbar"/>
-        <Link to={`/eventIndex/${idRnd}`} className="randomBtn">Random Button</Link>
+        <div className="content-filter">
+          <input id="search" name="search" placeholder="Search..." value={filters.search} onChange={handleChange} className="searchbar"/>
+        </div>
       </div>
       <Container fluid className="eventList overflow-auto">
         {filteredEvents.map(event => {
@@ -84,17 +86,17 @@ export default function EventIndex() {
               to={`/eventIndex/${id}`}
             >
               <div className="eventSgl-container">
-                <div className="eventImage">{image}</div>
+                <div className="eventImage" style={{ backgroundImage: `url(${image})`}}></div>
                 <div className="infobox">
                   <div className="detailsbox">
                     <div className="name">{event_name}</div>
                     <div className="detailsbox-inner">
                       <div className="genre-type">{genres[0].name}</div>
-                      <div className="distance">{distance} km</div>
+                      <div className="distance"><GiRunningShoe /> {distance}km</div>
                     </div>
                   </div>
                   <div className="datebox">
-                    <div className="datedisplay">{date}</div>
+                    <div className="datedisplay"><FaRegCalendarAlt />{date}</div>
                   </div>
                 </div>
               </div>

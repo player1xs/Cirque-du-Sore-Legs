@@ -11,6 +11,7 @@ export function setToken(token){
 }
 
 export function getToken(){
+  console.log('token reached')
   return localStorage.getItem(tokenName)
 }
 

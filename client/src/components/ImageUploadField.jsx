@@ -1,7 +1,7 @@
 import axios from "axios"
 
 // eslint-disable-next-line react/prop-types
-export default function ImageUploadField({ image, setImage }) {
+export default function ImageUploadField({ formData, setFormData }) {
 
   async function handleImageUpload(e) {
     const preset = import.meta.env.VITE_UPLOAD_PRESET
@@ -13,15 +13,20 @@ export default function ImageUploadField({ image, setImage }) {
     data.append('upload_preset', preset)
 
     const { data: { secure_url} } = await axios.post(endpoint, data)
-
-    setImage(secure_url)
+    setFormData({ ...formData, image:secure_url})
+    // setImage(secure_url)
   }
 
   return (
     <>
-      <img src={image} alt='Event-Image' />
-      <input type="hideen" name="image" value={image} className="imageUpload" />
-      <input type="file" onChange={handleImageUpload} />
+      {formData.image ?
+      <img src={formData.image} />
+      :
+      <input type="file" name="image" onChange={handleImageUpload} />
+      }
+      {/* <img src={image} alt='Event-Image' />
+      <input type="hidden" name="image" value={image} className="imageUpload" />
+      <input type="file" onChange={handleImageUpload} /> */}
     </>
   )
 

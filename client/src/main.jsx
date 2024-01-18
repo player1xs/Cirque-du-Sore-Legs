@@ -20,7 +20,7 @@ import Blog from './components/Blog'
 import { getAllEvents, getSingleEvent } from './utils/loaders/event'
 
 //aciotns
-import { createOrDeleteComment, createEvent, updateOrDeleteEvent } from './utils/actions/event'
+import { createOrDeleteComment, createEvent, updateEvent } from './utils/actions/event'
 import { getSingleUser } from './utils/loaders/user'
 
 const router = createBrowserRouter([
@@ -54,7 +54,7 @@ const router = createBrowserRouter([
         path: '/eventIndex/:eventId/update',
         element: <EventUpdate />,
         loader: async ({ params }) => getSingleEvent(params.eventId),
-        action: async ({ request, params }) => updateOrDeleteEvent(request, params.eventId)
+        action: async ({ request, params }) => updateEvent(request, params.eventId)
       },
       {
         path: '/profile',

@@ -4,9 +4,10 @@
 }
 
 .eventSgl-container {
-  color: white;
+  color: rgb(255, 255, 255);
   padding-left: 20px;
   padding-bottom: 10px;
+  padding-top: 10px;
   background-image: linear-gradient(to top,
                     rgba(83,83,83),
                     rgba(78,78,78),
@@ -21,12 +22,20 @@
   display: flex;
   flex-direction: row;
   text-decoration: none;
-  margin-top: 15px;
+  // margin-top: 15px;
+}
+
+.content-title {
+  padding-left: 20px;
 }
 
 .eventImage {
-  padding-right: 25px;
-  height: 100px;
+  // padding-right: 25px;
+  height: 125px;
+  width: 250px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   //center somehow
 }
 
@@ -35,6 +44,7 @@
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
+  padding-left: 10px;
 }
 
 .detailsbox {
@@ -54,7 +64,7 @@
 }
 
 .genre-type {
-  width: 100px;
+  width: 150px;
   text-decoration: none;
   border-radius: 25%;
   text-align: center;
@@ -64,4 +74,24 @@
                 0 -0.25rem 1.5rem rgb(0, 0, 0) inset,
                 0 0.75rem 0.5rem rgba(255,255,255, 0.4) inset,
                 0 0.25rem 0.5rem 0 rgb(104, 104, 104) inset;
+}
+
+.name {
+  font-size: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.distance {
+  margin-left: 25px;
+}
+
+.datedisplay {
+  padding-right: 35px;
+}
+
+.searchbar {
+  max-width: 50%;
 }
