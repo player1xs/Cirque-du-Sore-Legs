@@ -5,9 +5,20 @@ header {
   left: 0;
   top: 0;
   height: 100vh;
-  width: 15%;
+  width: 16%;
   box-shadow: 10px 0 25px 0 rgb(0, 0, 0);
   border-top-right-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+h1 {
+  background-image: linear-gradient(90deg, rgb(184, 0, 150), rgba(216, 5, 5, 0.863));
+  -webkit-background-clip: text;
+          background-clip: text;
+  background-size: 100%;
+  -webkit-text-fill-color: transparent;
 }
 
 .navigation {
@@ -20,7 +31,7 @@ header {
   color: white;
   cursor: pointer;
   position: relative;
-  padding: 20px 70px;
+  padding: 10px 15px;
   border-bottom-right-radius: 3.75rem;
   border-top-right-radius: 0.4rem;
   line-height: 2.5rem;
@@ -66,6 +77,29 @@ header {
   border: none;
 }
 
+.social {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.social-icon {
+  width: 50px;
+  color: white;
+  padding-bottom: 20px;
+}
+
+.gitgud {
+  color: white;
+  padding-bottom: 10px;
+  padding-left: 15px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+}
+
 .create-account {
   display: flex;
   justify-content: center;
@@ -80,16 +114,6 @@ header {
   width: 100%;
 }
 
-Form.create-account {
-  position: fixed;
-  width: 450px;
-  position: fixed;
-  bottom: 40;
-  width: 100%;
-  position: absolute;
-  bottom: 4px;
-}
-
 Form.log_in {
   display: flex;
   justify-content: center;
@@ -101,17 +125,15 @@ Form.log_in {
   border-radius: 12px;
   max-width: 400px;
   padding: 8px;
-  width: 100%;
+  width: 150px;
 }
 
 input {
   background-color: #fff;
-  margin: 6px;
-  padding: 10px;
+  margin-bottom: 6px;
   border: none;
   border-radius: 9px;
   display: block;
-  font-family: Arial, Helvetica, sans-serif;
   width: 100%;
 }
 
@@ -119,6 +141,7 @@ input {
   height: 50vh;
   display: flex;
   justify-content: center;
+  align-items: center;
   -webkit-backdrop-filter: blur(1px);
           backdrop-filter: blur(1px);
 }
@@ -131,12 +154,6 @@ input {
 .modal-content {
   background-color: transparent;
   border: none;
-}
-
-.centered-modal {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .container {
@@ -163,6 +180,11 @@ input {
 
 .btn.btn-danger {
   margin-bottom: 10px;
+}
+
+.login-form {
+  margin-left: 0%;
+  width: 25%;
 }
 
 button.icon.btn.btn-primary {

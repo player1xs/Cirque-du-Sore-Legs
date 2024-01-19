@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { useActionData, useLoaderData, useNavigate } from "react-router-dom"
+import { useActionData, useLoaderData, useNavigate, Link } from "react-router-dom"
 import { updateEvent } from "../utils/actions/event"
 import Container from "react-bootstrap/esm/Container"
 import ImageUploadField from "./ImageUploadField"
@@ -88,6 +88,7 @@ export default function EventUpdate() {
             <button type="submit">Create Event</button>
             {/* <Button type="submit">Create Event2</Button> */}
           </form>
+          <Link to={`/eventIndex`} className="backBtn">Delete</Link>
           </Container>
       </div>
     </>

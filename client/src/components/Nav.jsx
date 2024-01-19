@@ -5,6 +5,10 @@ import { registerUser, loginUser } from '../utils/actions/auth'
 import Modal from 'react-bootstrap/Modal'
 import Button from 'react-bootstrap/Button'
 
+import { FaInstagram } from "react-icons/fa";
+import { FaXTwitter, FaRebel } from "react-icons/fa6";
+import { FaGithub } from "react-icons/fa";
+
 
 export default function Nav() {
   
@@ -83,9 +87,14 @@ export default function Nav() {
           </div>
         </div>
         <div className="footer">
-          github
-          social
-          cookies
+          <div className="social">
+              <a href="https://www.instagram.com" className="social-icon"><FaInstagram /></a>
+              <a href="#" className="social-icon"><FaRebel /></a>
+              <a href="https://twitter.com" className="social-icon"><FaXTwitter /></a>
+          </div>
+          
+          <a href="https://github.com/player1xs" className="gitgud"><FaGithub />Chimera Studios</a>
+          <Link to={'/cookies'} className="gitgud">cookies</Link>
         </div>
       </header>
 
@@ -100,7 +109,7 @@ export default function Nav() {
             <input type="password" name="password_confirmation" placeholder="Password Confirmation" onChange={handleChange} />
             <Button className="regBtn" type="submit" onClick={submitRegistration}>Register</Button>
             <div className="sign-in">
-              Returning Runner? &nbsp;
+              Returning Runner...? &nbsp;
               <Button className="changeBtn" type="button" onClick={() => {
                 setModalShow(false)
                 setLoginModalShow(true)

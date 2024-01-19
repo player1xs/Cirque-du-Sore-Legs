@@ -1,0 +1,114 @@
+import '../styles/components/Hero.scss';
+
+export default function Hero() {
+  
+  
+  return (
+    <>
+    <div className="hero-container">
+        <div className="w">
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+          <div className="i"></div>
+        </div>
+      </div>
+    </>
+  )
+}

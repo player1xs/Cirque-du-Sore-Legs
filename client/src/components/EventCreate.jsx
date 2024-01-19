@@ -64,19 +64,19 @@ export default function EventCreate() {
         <Container fluid className="create-container overflow-auto">
           <form onSubmit={handleSubmit} >
             <label form="event_name">Event Name</label>
-            <input type="text" name="event_name" placeholder="Event Name..." onChange={handleChange} value={formData.event_name} />
+            <input type="text" name="event_name" placeholder="Event Name..." className="create" onChange={handleChange} value={formData.event_name} />
             <label form="company">Organiser</label>
-            <input type="text" name="company" placeholder="Organiser..." onChange={handleChange} value={formData.company} />
+            <input type="text" name="company" placeholder="Organiser..." className="create" onChange={handleChange} value={formData.company} />
             <label form="address">Address</label>
-            <input type="text" name="address" placeholder="Address..." onChange={handleChange} value={formData.address} />
+            <input type="text" name="address" placeholder="Address..." className="create" onChange={handleChange} value={formData.address} />
             <label form="data">Date</label>
-            <input type="date" name="date" placeholder="Date..." onChange={handleChange} value={formData.date} />
+            <input type="date" name="date" placeholder="Date..." className="create" onChange={handleChange} value={formData.date} />
             <label form="description">Description</label>
-            <input type="text" name="description" placeholder="Description..." onChange={handleChange} value={formData.description} />
-            <label form="distance">Distance</label>
-            <input type="number" name="distance" placeholder="Distance" onChange={handleChange} value={formData.distance} />
+            <input type="text" name="description" placeholder="Description..." className="create" onChange={handleChange} value={formData.description} />
+            <label form="distance">Distance in km</label>
+            <input type="number" name="distance" placeholder="Distance" className="create" onChange={handleChange} value={formData.distance} />
             <label form="website">Website</label>
-            <input type="text" name="website" placeholder="Website..." onChange={handleChange} value={formData.website} />
+            <input type="text" name="website" placeholder="Website..." className="create" onChange={handleChange} value={formData.website} />
             <label form="genres">Genre</label>
             <select name="genres" id="genres" onChange={handleChange} value={formData.genres}>
               <option value="1">Road</option>

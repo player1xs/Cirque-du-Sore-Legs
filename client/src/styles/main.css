@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
 header {
   background-color: rgb(99, 99, 99);
   background: repeating-radial-gradient(circle at 0 0, rgb(46, 46, 46), rgb(147, 147, 147));
@@ -5,9 +7,20 @@ header {
   left: 0;
   top: 0;
   height: 100vh;
-  width: 15%;
+  width: 16%;
   box-shadow: 10px 0 25px 0 rgb(0, 0, 0);
   border-top-right-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+h1 {
+  background-image: linear-gradient(90deg, rgb(184, 0, 150), rgba(216, 5, 5, 0.863));
+  -webkit-background-clip: text;
+          background-clip: text;
+  background-size: 100%;
+  -webkit-text-fill-color: transparent;
 }
 
 .navigation {
@@ -20,7 +33,7 @@ header {
   color: white;
   cursor: pointer;
   position: relative;
-  padding: 20px 70px;
+  padding: 10px 15px;
   border-bottom-right-radius: 3.75rem;
   border-top-right-radius: 0.4rem;
   line-height: 2.5rem;
@@ -66,6 +79,29 @@ header {
   border: none;
 }
 
+.social {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.social-icon {
+  width: 50px;
+  color: white;
+  padding-bottom: 20px;
+}
+
+.gitgud {
+  color: white;
+  padding-bottom: 10px;
+  padding-left: 15px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+}
+
 .create-account {
   display: flex;
   justify-content: center;
@@ -80,16 +116,6 @@ header {
   width: 100%;
 }
 
-Form.create-account {
-  position: fixed;
-  width: 450px;
-  position: fixed;
-  bottom: 40;
-  width: 100%;
-  position: absolute;
-  bottom: 4px;
-}
-
 Form.log_in {
   display: flex;
   justify-content: center;
@@ -101,17 +127,15 @@ Form.log_in {
   border-radius: 12px;
   max-width: 400px;
   padding: 8px;
-  width: 100%;
+  width: 150px;
 }
 
 input {
   background-color: #fff;
-  margin: 6px;
-  padding: 10px;
+  margin-bottom: 6px;
   border: none;
   border-radius: 9px;
   display: block;
-  font-family: Arial, Helvetica, sans-serif;
   width: 100%;
 }
 
@@ -119,6 +143,7 @@ input {
   height: 50vh;
   display: flex;
   justify-content: center;
+  align-items: center;
   -webkit-backdrop-filter: blur(1px);
           backdrop-filter: blur(1px);
 }
@@ -131,12 +156,6 @@ input {
 .modal-content {
   background-color: transparent;
   border: none;
-}
-
-.centered-modal {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .container {
@@ -165,6 +184,11 @@ input {
   margin-bottom: 10px;
 }
 
+.login-form {
+  margin-left: 0%;
+  width: 25%;
+}
+
 button.icon.btn.btn-primary {
   margin: auto 0px;
   padding-right: 20px;
@@ -185,19 +209,26 @@ h2 {
 }
 
 .eventSgl-container {
-  color: white;
+  color: rgb(255, 255, 255);
   padding-left: 20px;
   padding-bottom: 10px;
+  padding-top: 10px;
   background-image: linear-gradient(to top, rgb(83, 83, 83), rgb(78, 78, 78), rgb(73, 73, 73), rgb(83, 83, 83), rgb(93, 93, 93), rgb(103, 103, 103), rgb(113, 113, 113), rgb(123, 123, 123), rgb(133, 133, 133));
   display: flex;
   flex-direction: row;
   text-decoration: none;
-  margin-top: 15px;
+}
+
+.content-title {
+  padding-left: 20px;
 }
 
 .eventImage {
-  padding-right: 25px;
-  height: 100px;
+  height: 125px;
+  width: 250px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .infobox {
@@ -205,6 +236,7 @@ h2 {
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
+  padding-left: 10px;
 }
 
 .detailsbox {
@@ -224,7 +256,7 @@ h2 {
 }
 
 .genre-type {
-  width: 100px;
+  width: 150px;
   text-decoration: none;
   border-radius: 25%;
   text-align: center;
@@ -233,9 +265,89 @@ h2 {
   box-shadow: 0 1rem 1.25rem 0 rgba(0, 0, 0, 0.5), 0 -0.25rem 1.5rem rgb(0, 0, 0) inset, 0 0.75rem 0.5rem rgba(255, 255, 255, 0.4) inset, 0 0.25rem 0.5rem 0 rgb(104, 104, 104) inset;
 }
 
+.name {
+  font-size: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.distance {
+  margin-left: 25px;
+}
+
+.datedisplay {
+  padding-right: 35px;
+}
+
+.searchbar {
+  max-width: 50%;
+}
+
+.indexmap {
+  display: flex;
+  justify-content: center;
+}
+
+.indextext {
+  text-align: center;
+  color: white;
+}
+
 .singlePage {
-  background: linear-gradient(120deg, #FF0000 0%, #2400FF 100%), linear-gradient(120deg, #FA00FF 0%, #208200 100%), linear-gradient(130deg, #00F0FF 0%, #000000 100%), radial-gradient(110% 140% at 15% 90%, #ffffff 0%, #1700A4 100%), radial-gradient(100% 100% at 50% 0%, #AD00FF 0%, #00FFE0 100%), radial-gradient(100% 100% at 50% 0%, #00FFE0 0%, #7300A9 80%), linear-gradient(30deg, #7ca304 0%, #2200AA 100%);
-  background-blend-mode: overlay, color, overlay, difference, color-dodge, difference, normal;
+  margin-left: 50px;
+  margin-top: 25px;
+  color: white;
+}
+
+.imgDr {
+  height: 400px;
+  max-width: 60%;
+  box-shadow: 7px 6px 2px rgba(0, 0, 0, 0.661);
+}
+
+.about-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.event-description {
+  display: flex;
+  margin-left: 20px;
+}
+
+.deeets {
+  margin-top: 20px;
+  width: 50%;
+  max-width: 50%;
+  background-color: rgba(44, 44, 44, 0.6);
+  box-shadow: 7px 6px 2px rgba(0, 0, 0, 0.661);
+  height: 200px;
+}
+
+.info {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding-left: 10px;
+}
+
+.info2 {
+  color: rgb(196, 0, 127);
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding-left: 10px;
+  text-decoration: underline;
+}
+
+.information {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.single-map {
+  margin-top: 20px;
 }
 
 .dino {
@@ -247,12 +359,10 @@ h2 {
 }
 
 #error-page {
-  background-color: grey;
   height: 100vh;
 }
 
 .error-box {
-  background-color: grey;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -269,11 +379,152 @@ h2 {
   right: 0;
   height: 100vh;
   width: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.ad {
+  position: relative;
+  text-align: center;
+}
+
+.discount {
+  width: 75%;
+  height: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.discount-imaage {
+  width: 100%;
+}
+
+.discount-text {
+  color: white;
+  width: 100%;
+  text-align: center;
+}
+
+.sponsored {
+  color: white;
+}
+
+.leaflet-container {
+  height: 300px;
+  width: 450px;
+  align-self: center;
+  margin-bottom: 25px;
+  box-shadow: 7px 6px 2px rgba(0, 0, 0, 0.661);
+}
+
+.popUp {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cluster-icon {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+}
+
+.mapbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+img.popUp-img {
+  width: 120px;
+}
+
+.hometext {
+  color: white;
+  text-align: center;
+  padding-left: 20px;
+  margin-top: 50px;
+}
+
+.hometitle {
+  text-align: center;
+  padding-left: 20px;
+  margin-top: 50px;
+}
+
+.w {
+  margin: 0 auto;
+  white-space: nowrap;
+  max-width: 1200px;
+  width: 100%;
+  height: 600px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  background: rgba(66, 66, 66, 0.5) url("https://res.cloudinary.com/djgaevw62/image/upload/v1705438934/Cirque%20du%20Sore-Legs/60a9f5c2-947a-47d9-a1bc-d37454a4045c_lemaat.jpg") repeat fixed;
+  background-size: cover;
+  position: relative;
+  z-index: 5;
+  font-size: 0;
+}
+
+.i {
+  width: 40px;
+  height: 100%;
+  display: inline-block;
+  position: relative;
+  z-index: 4;
+  padding: 2px;
+  transition: all 1.3s ease-in-out;
+  background: rgba(66, 66, 66, 0.5) url("https://wallpapergod.com/images/hd/running-5491X3599-wallpaper-fstsrysdq98kj5j0.jpeg") repeat fixed;
+  background-size: cover;
+  border-radius: 0%;
+}
+
+.i:hover {
+  transition: all 0s linear;
+  opacity: 0;
+}
+
+.h {
+  display: block;
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  text-align: center;
+  top: 35px;
+  font-size: 40px;
+  color: rgb(245, 245, 220);
+  text-shadow: 0 5px 17px rgba(87, 87, 80, 0.85);
+}
+
+.hero-container {
+  padding-left: 20px;
+}
+
+.profile-container {
+  padding-left: 20px;
+}
+
+.cookies-page {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
+  font-family: "Audiowide", sans-serif;
 }
 
 body {
@@ -283,12 +534,8 @@ body {
 }
 
 .content {
-  margin-left: 15%;
+  margin-left: 16%;
   margin-right: 15%;
-}
-
-.map-container {
-  height: 400px;
 }
 
 .sidebar {
@@ -309,4 +556,20 @@ body {
   margin: auto;
   margin-top: 300px;
   border-radius: 55%;
+}
+
+h5 {
+  color: white;
+}
+
+.blog-tag {
+  color: white;
+}
+
+.blog-container {
+  padding-left: 20px;
+}
+
+.blog-pic {
+  height: 300px;
 }/*# sourceMappingURL=main.css.map */

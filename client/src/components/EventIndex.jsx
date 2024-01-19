@@ -7,6 +7,8 @@ import Container from 'react-bootstrap/Container'
 import { FaRegCalendarAlt } from "react-icons/fa";
 // import { GiPathDistance } from "react-icons/gi";
 import { GiRunningShoe } from "react-icons/gi";
+import Mapbox from "./Mapbox.jsx";
+import '../styles/components/MapBox.scss';
 
 export default function EventIndex() {
   
@@ -71,6 +73,12 @@ export default function EventIndex() {
     <div className="content">
       <div className="content-title">  
         <h2>Event List</h2>
+        <div className="indexmap">
+          <Mapbox />
+        </div>
+        <p className="indextext">
+          Browse the events below if there is something you are looking to join or find some inspiration, use the search bar to specify, or take a stab at the map above and book a trip!
+        </p>
         <div className="content-filter">
           <input id="search" name="search" placeholder="Search..." value={filters.search} onChange={handleChange} className="searchbar"/>
         </div>

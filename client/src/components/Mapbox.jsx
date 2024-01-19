@@ -42,37 +42,36 @@
 
 
 /* eslint-disable react/jsx-key */
-// import { Icon } from 'leaflet'
+import { Icon } from 'leaflet'
 // import { divIcon, point } from 'leaflet'
 import '../styles/components/MapBox.scss'
 import 'leaflet/dist/leaflet.css'
 
-import { MapContainer, TileLayer } from 'react-leaflet' //Popup, Marker
-// import { useLoaderData } from 'react-router'
-// import { Link } from 'react-router-dom'
-// import MarkerClusterGroup from 'react-leaflet-cluster'
+import { MapContainer, TileLayer, Popup, Marker } from 'react-leaflet'
+import { useLoaderData } from 'react-router'
+import { Link } from 'react-router-dom'
 
 
 
 export default function Mapbox() {
 
-  // const markers = useLoaderData()
+  const markers = useLoaderData()
   
-  // const customIcon = new Icon({
-  //   iconUrl: "https://icons.veryicon.com/png/o/clothes-accessories/platinum-knight-travel-shot-monochrome-icon/wine-glass-46.png",
-  //   iconSize: [38, 38]
-  // })
+  const customIcon = new Icon({
+    iconUrl: "../src/images/running_1445114.png",
+    iconSize: [35, 35],
+  })
 
 
   return (
-    <MapContainer center={[-0.050635, 1.479107]} zoom={2}>
+    <MapContainer center={[24.3781, -5.4360]} zoom={1}>
       <TileLayer 
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        // attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url='https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png'
       />
 
-      {/* {markers.map(marker => (
-        <Marker position={marker.address} key={marker.id} icon={customIcon}>
+      {markers.map(marker => (
+        <Marker position={[marker.lat, marker.long]} key={marker.id} icon={customIcon}>
           <Popup>
             <div className="popUp">
               <img className="popUp-img" src={marker.image} height="75px"/>
@@ -80,7 +79,7 @@ export default function Mapbox() {
             </div>
           </Popup>
         </Marker>
-      ))} */}
+      ))}
     </MapContainer>
   )
 }

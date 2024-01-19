@@ -1,38 +1,38 @@
-// .advert {
-//   position: fixed;
-//   top: 0;
-//   right: 0;
-//   height: 100vh;
-//   width: 15%;
+.advert {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 15%;
 
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   justify-content: center;
-// }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
-// .ad {
-//   position: relative;
-//   text-align: center;
-// }
+.ad {
+  position: relative;
+  text-align: center;
+}
 
-// .discount {
-//   width: 75%;
-//   height: 70%;
-//   margin-left: auto;
-//   margin-right: auto;
-//   border: solid black 2px
-// }
+.discount {
+  width: 75%;
+  height: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-// .discount-imaage {
-//   // width: 80%;
-// }
+.discount-imaage {
+  width: 100%;
+}
 
-// .discount-text{
-//   color: white;
-//   font-size: 2rem;
-//   position: absolute;
-//   bottom: 0;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-// }
+.discount-text {
+  color: white;
+  width: 100%;
+  text-align: center;
+}
+
+.sponsored {
+  color: white;
+}

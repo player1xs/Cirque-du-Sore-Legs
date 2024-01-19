@@ -1,9 +1,9 @@
 .leaflet-container {
-  height: 400px;
-  width: 600px;
+  height: 300px;
+  width: 450px;
   align-self: center;
   margin-bottom: 25px;
-  box-shadow: 7px 10px 12px rgba(0, 0, 0, 0.661);
+  box-shadow: 7px 6px 2px rgba(0, 0, 0, 0.661);
 }
 
 .popUp {
@@ -17,7 +17,6 @@
   height: 3rem;
   width: 3rem;
   border-radius: 50%;
-  background-color: aliceblue;
 }
 
 .mapbox {

@@ -1,6 +1,6 @@
 .singlePage {
   margin-left: 50px;
-  margin-top: 75px;
+  margin-top: 25px;
   //might comment above out
   color: white;
 }
@@ -25,9 +25,11 @@
 
 .deeets {
   margin-top: 20px;
-  max-width: 60%;
+  width: 50%;
+  max-width: 50%;
   background-color: rgba(44, 44, 44, 0.6);
   box-shadow: 7px 6px 2px rgba(0, 0, 0, 0.661);
+  height: 200px;
 }
 
 .info {
@@ -35,4 +37,23 @@
   margin-bottom: 5px;
   padding-left:10px;
   
+}
+
+.info2 {
+  color: rgb(196, 0, 127);
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding-left:10px;
+  text-decoration: underline;
+  
+}
+
+.information {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.single-map {
+  margin-top: 20px;
 }

@@ -14,6 +14,7 @@ import EventUpdate from './components/EventUpdate'
 import ErrorPage from './components/ErrorPage'
 import Profile from './components/Profile'
 import Blog from './components/Blog'
+import Cookie from './components/Cookies'
 // add Blog and Cookies and Terms
 
 // Loaders
@@ -64,6 +65,10 @@ const router = createBrowserRouter([
       {
         path: '/blog',
         element: <Blog />
+      },
+      {
+        path: '/cookies',
+        element: <Cookie />
       }
     ]
   }

@@ -3,6 +3,12 @@
 @import './components/EventSingle.scss';
 @import './components/ErrorPage.scss';
 @import './components/AdColumn.scss';
+@import './components/MapBox.scss';
+@import './components/Home.scss';
+@import './components/Hero.scss';
+@import './components/Profile.scss';
+@import './components/Cookies.scss';
+@import './components/EventCreate.scss';
 
 
 
@@ -32,11 +38,6 @@ body {
   // box-shadow: -10px 0 15px 0 rgb(102, 102, 102);
 }
 
-
-.map-container {
-  height: 400px;
-}
-
 .sidebar {
   background-color: rgb(35 55 75 / 90%);
   color: #fff;
@@ -55,4 +56,20 @@ body {
     margin: auto;
     margin-top: 300px;
     border-radius: 55%;
+  }
+
+  h5 {
+    color: white;
+  }
+
+  .blog-tag {
+    color: white;
+  }
+
+  .blog-container {
+    padding-left: 20px;
+  }
+
+  .blog-pic {
+    height: 300px;
   }

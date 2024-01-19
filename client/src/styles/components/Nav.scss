@@ -12,6 +12,9 @@ header {
   width: 16%;
   box-shadow: 10px 0 25px 0 rgb(0, 0, 0);
   border-top-right-radius: 20px ;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 h1 {
@@ -95,6 +98,29 @@ h1 {
   border: none;
 }
 
+.social {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.social-icon {
+  // height: 50px;
+  width: 50px;
+  color: white;
+  padding-bottom: 20px;
+}
+
+.gitgud {
+  color: white;
+  padding-bottom: 10px;
+  padding-left: 15px
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+}
 
 
 
@@ -115,16 +141,6 @@ h1 {
   width: 100%;
 }
 
-Form.create-account {
-  position: fixed;
-  width: 450px;
-  position: fixed;
-  bottom: 40;
-  width: 100%;
-  position: absolute;
-  bottom: 4px;
-}
-
 Form.log_in {
   display: flex;
   justify-content: center;
@@ -136,18 +152,17 @@ Form.log_in {
   border-radius: 12px;
   max-width: 400px;
   padding: 8px;
-  width: 100%;
+  width: 150px;
 }
 
 input {
   background-color: #fff;
-  margin: 6px;
-  padding: 10px;
+  margin-bottom: 6px;
+  // padding: 10px;
   border: none;
   border-radius: 9px;
   display: block;
   // height: 5vh;
-  font-family: Arial, Helvetica, sans-serif;
   width: 100%
 }
 
@@ -155,6 +170,7 @@ input {
   height: 50vh;
   display: flex;
   justify-content: center;
+  align-items: center;
   backdrop-filter: blur(1px);
 }
 
@@ -166,12 +182,6 @@ input {
 .modal-content {
   background-color: transparent;
   border:none
-}
-
-.centered-modal {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .container {
@@ -197,6 +207,14 @@ input {
 
 .btn.btn-danger {
   margin-bottom: 10px;
+}
+
+.login-form {
+  // position: fixed;
+  // bottom: 0;
+  margin-left: 0%;
+  // margin-right: 45%;
+  width: 25%;
 }
 
 
