@@ -93,7 +93,7 @@ export default function Nav() {
               <a href="https://twitter.com" className="social-icon"><FaXTwitter /></a>
           </div>
           
-          <a href="https://github.com/player1xs" className="gitgud"><FaGithub />Chimera Studios</a>
+          <a href="https://github.com/player1xs" className="gitgud"><FaGithub /> Chimera Studios</a>
           <Link to={'/cookies'} className="gitgud">cookies</Link>
         </div>
       </header>

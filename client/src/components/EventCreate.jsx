@@ -86,8 +86,10 @@ export default function EventCreate() {
               <option value="6">Ninja-Sport</option>
               <option value="4">Multi-Sport</option>
             </select>
+            <div className="image-upload">
             {/* <ImageUploadField image={image} setImage={setIamge} /> */}
-            <ImageUploadField setFormData={setFormData} formData={formData} />
+              <ImageUploadField setFormData={setFormData} formData={formData} />
+            </div>
             <button type="submit">Create Event</button>
             {/* <Button type="submit">Create Event2</Button> */}
           </form>
