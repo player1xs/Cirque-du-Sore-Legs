@@ -43,7 +43,7 @@ export async function createOrDeleteComment(request, eventId, commentId) {
   let data = await formToObj(request)
 
   if (data.intent === 'create') {
-    return await axios.post(`/api/events/${eventId}/comments`, data, {
+    return await axios.post(`/api/events/${eventId}/comments/`, data, {
       validateStatus: () => true,
       headers: {
         Authorization: `Bearer ${getToken()}`
@@ -51,12 +51,12 @@ export async function createOrDeleteComment(request, eventId, commentId) {
     })
   }
   if (data.intent === 'delete') {
-    await axios.delete(`/api/events/${eventId}/comments/${commentId}`, {
+    await axios.delete(`/api/events/${eventId}/comments/${commentId}/`, {
       validateStatus: () => true,
       headers: {
         Authorization: `Bearer ${getToken()}`
       }
     })
-    return redirect(`/eventIndex/${eventId}`)
+    return redirect(`/eventIndex/${eventId}/`)
   }
 }

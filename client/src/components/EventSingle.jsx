@@ -49,7 +49,7 @@ export default function EventSingle() {
               <MapContainer center={[lat, long]} zoom={7} className="map2">
             
                 <TileLayer
-                // attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 url='https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png'
                 />
                 <Marker position={[lat, long]} icon={customIcon}></Marker>

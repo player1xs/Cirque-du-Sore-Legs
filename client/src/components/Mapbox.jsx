@@ -4,7 +4,6 @@
 
 // export default function Mapbox() {
 
-// mapboxgl.accessToken = 'pk.eyJ1IjoicGxheWVyMXhzIiwiYSI6ImNscjljZnFnMzAwNDAydXZ4amRxaWRqY2IifQ.KRPS01-jEAJlDk8W47MBzw'
 
 // const mapContainer = useRef(null)
 // const map = useRef(null)
@@ -66,7 +65,7 @@ export default function Mapbox() {
   return (
     <MapContainer center={[24.3781, -5.4360]} zoom={1}>
       <TileLayer 
-        // attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url='https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png'
       />
 
